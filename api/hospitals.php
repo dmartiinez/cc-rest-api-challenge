@@ -16,7 +16,8 @@
             $resp = get_hospitals($db_conn, $hospital_id);
          }
          else{
-            $resp = get_hospitals($db_conn);
+            $city = isset($_GET['city']) ? $_GET['city'] : '';
+            $resp = get_hospitals($db_conn, null, $city);
          }
          echo json_encode($resp);
          break;
@@ -35,9 +36,15 @@
       break;
    }
 
-   function get_hospitals($db_conn, $id = null)
+   function get_hospitals($db_conn, $id = null, $city = '')
    {
-      $sql = $id ? "SELECT * FROM hospitals WHERE id ='".$id."'" : "SELECT * FROM hospitals";
+      if($id){
+         $sql = "SELECT * FROM hospitals WHERE id ='".$id."'";
+      }else if($city){
+         $sql = "SELECT * FROM hospitals WHERE city = '".$city."'";
+      } else{
+         $sql = "SELECT * FROM hospitals";
+      }
       if(!($query = $db_conn->query($sql))){
          die("There was an error processing the request: " . $db_conn->error."\n");
       };
