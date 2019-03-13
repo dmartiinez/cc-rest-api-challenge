@@ -75,6 +75,8 @@ SQL;
          }else{
             print_r("Entry created successfully!");
          }
+      }else{
+         print_r('Unable to process request. There was an issue with the data provided');
       }
       return;
    }  
@@ -101,6 +103,8 @@ SQL;
          }else{
             print_r('Please provide ID of record to update');
          }
+      }else{
+         print_r('Unable to process request. There was an issue with the data provided');
       }
    }
 
@@ -121,6 +125,8 @@ SQL;
          }else{
             print_r('Please provide ID of record to delete');
          }
+      }else{
+         print_r('Unable to process request. There was an issue with the data provided');
       }
    }
 

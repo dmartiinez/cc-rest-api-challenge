@@ -7,13 +7,13 @@ While that is being setup, download [Postman](https://www.getpostman.com/downloa
 
 # Interacting with API
 
-Once you have Postman up and running you can select waht kind of requests you want to perform on the API. The request URL will be `http://localhost:8080/hospitals.php`.
+Once you have Postman up and running you can select what kind of requests you want to perform on the API. The request URL will be `http://localhost:8080/hospitals.php`.
 
 ## GET
 
-You can perform this request by simply going to `http://localhost:8080/hospitals.php` and you can add the id and city parameters to the URL to test those results. (the Json Viewer chrome extension prettyfies the output if :))
+You can perform this request by simply going to `http://localhost:8080/hospitals.php` and you can add the id and city parameters to the URL to test those results. (the Json Viewer chrome extension prettyfies the output :))
 
-You can also do this in Postman, just enter the url and hit the blue `Send` button. To enter the query parameters, just enter the key and value in the `Params` tab or add to the URL field.
+You can also do this in Postman, the GET request should be preselected so just enter the url and hit the blue `Send` button. To enter the query parameters, just enter the key and value in the `Params` tab or add to the URL field.
 
 ## POST
 
@@ -51,7 +51,7 @@ ex:
     "id": 6
 }
 ```
-
+* Note: You can also select the format you want to view the response in. HTML is preselected but you can change this to JSON if you want it to look nicer!. *
 
 # Viewing DB
 
